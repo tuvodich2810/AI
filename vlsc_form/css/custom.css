@@ -1,0 +1,238 @@
+html,
+body {
+  background: #071426;
+}
+
+.main-wrapper {
+  min-height: 100vh;
+  background: #071426;
+}
+
+.header {
+  left: 2.1rem;
+  top: 1.45rem;
+  z-index: 30;
+}
+
+.header__logo {
+  width: clamp(88px, 7.4vw, 150px);
+}
+
+.hero {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero__bg-block {
+  background:
+    radial-gradient(circle at 50% 92%, rgba(196, 58, 56, 0.72) 0, rgba(96, 28, 42, 0.45) 25%, rgba(9, 20, 37, 0) 55%),
+    #071426;
+}
+
+.hero__content {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hero__bottom-arr {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero__bg-text {
+  z-index: 2;
+  transform: translate3d(0, 0, 0) scale(1.1);
+}
+
+.hero__bg-samurai {
+  z-index: 4;
+}
+
+.hero__bg-figure {
+  opacity: 0.26;
+  z-index: 1;
+}
+
+.hero__bg-circle {
+  opacity: 0.62;
+}
+
+.samurai-katana__neon {
+  filter: drop-shadow(0 0 12px rgba(255, 87, 78, 0.75));
+}
+
+.hero-parallax-bottom__content {
+  min-height: 100vh;
+  width: 100%;
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.bottom-block {
+  display: none;
+}
+
+.contact-panel {
+  position: relative;
+  width: 100%;
+  min-height: clamp(48rem, 64vw, 62rem);
+  margin-top: 0;
+  padding: clamp(6rem, 8vw, 8.5rem) clamp(1rem, 6vw, 7.5rem) clamp(3rem, 5vw, 4.5rem);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contact-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(34, 9, 18, 0.42) 0%, rgba(38, 9, 20, 0.18) 42%, rgba(6, 15, 31, 0.72) 100%),
+    radial-gradient(circle at 50% 30%, rgba(255, 74, 74, 0.16), transparent 42%);
+}
+
+.contact-panel__bg,
+.contact-panel__bg-item {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.contact-panel__bg {
+  z-index: 0;
+}
+
+.contact-panel__bg-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contact-panel__bg-item.item-1 {
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.contact-panel__bg-item.item-2 {
+  z-index: 2;
+  opacity: 0.72;
+  mix-blend-mode: screen;
+}
+
+.contact-panel__form-wrap {
+  position: relative;
+  z-index: 3;
+  width: min(49.75rem, 100%);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.contact-panel .bottom-block__form-ttl {
+  margin-bottom: clamp(2.7rem, 4.2vw, 3.75rem);
+  font-size: clamp(3rem, 4.7vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: 0;
+  color: #fff;
+  text-shadow: 0 0 24px rgba(255, 91, 101, 0.14);
+}
+
+.contact-panel .bottom-block__form {
+  margin-bottom: 0;
+}
+
+.contact-panel .bottom-block__form input,
+.contact-panel .bottom-block__form textarea {
+  background: rgba(17, 17, 35, 0.94);
+  color: #fff;
+  border: 0;
+  font-size: clamp(1.45rem, 1.75vw, 1.95rem);
+  line-height: 1.2;
+  margin-bottom: 0.65rem;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.contact-panel .bottom-block__form input::placeholder,
+.contact-panel .bottom-block__form textarea::placeholder {
+  color: #a6abc5;
+  opacity: 1;
+}
+
+.contact-panel .bottom-block__form input {
+  height: clamp(4.25rem, 5.2vw, 5.3rem);
+  padding: 0 clamp(1.7rem, 2.4vw, 2.2rem);
+}
+
+.contact-panel .bottom-block__form textarea {
+  height: clamp(15rem, 22vw, 19.6rem);
+  padding: clamp(1.55rem, 2vw, 2rem);
+}
+
+.contact-panel .bottom-block__form-submit-wrap {
+  margin-top: 1.45rem;
+  height: clamp(4.75rem, 5.6vw, 5.5rem);
+}
+
+.contact-panel .bottom-block__form-submit {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 91, 101, 0.16) 0%, rgba(255, 91, 101, 0.46) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.contact-panel .bottom-block__form-submit .btn-content {
+  font-size: clamp(1.55rem, 1.9vw, 1.95rem);
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.contact-panel .btn-corners__left-top,
+.contact-panel .btn-corners__left-bot,
+.contact-panel .btn-corners__right-top,
+.contact-panel .btn-corners__right-bot {
+  filter: brightness(0) invert(1);
+}
+
+.contact-panel .btn-dots {
+  opacity: 0.75;
+}
+
+@media (max-width: 720px) {
+  .header {
+    left: 1rem;
+    top: 1rem;
+  }
+
+  .header__logo {
+    width: 86px;
+  }
+
+  .contact-panel {
+    min-height: 44rem;
+    padding: 3.25rem 1rem 3rem;
+  }
+
+  .contact-panel .bottom-block__form-ttl {
+    margin-bottom: 2.25rem;
+  }
+
+  .contact-panel .bottom-block__form input {
+    height: 4.6rem;
+    padding: 0 1.35rem;
+  }
+
+  .contact-panel .bottom-block__form textarea {
+    height: 14rem;
+    padding: 1.35rem;
+  }
+
+  .contact-panel .bottom-block__form-submit-wrap {
+    height: 4.7rem;
+  }
+}
